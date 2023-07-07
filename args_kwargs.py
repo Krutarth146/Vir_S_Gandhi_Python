@@ -43,3 +43,5 @@ dict1 = {"name" : "Aman", "roll" : 900, "salary" : 90}
 royal(90,80,79,67,dict1)
 
 
+# Remaining -> lambda, Recursion, ierators, Generators, Map, reduce, filter
+
