@@ -98,3 +98,66 @@ print(l4)   # [10, 90, 'dhyan', 78, 'Manish', 67]
 
 # l4[10] = 'Gandhi'
 # print(l4)  # Gives Error
+
+
+list1 = [10,20,1,1,1,1,3,2,10,20]
+# 10 ---> [0,8]
+# 20 ---> [1,9]
+# 1  ---> [2,3,4,5]
+
+
+unique = []
+
+for i in list1:
+    if i not in unique:
+        unique.append(i)
+
+temp = []
+for ele in unique:   # i = 10
+    # temp = []
+    temp.clear()
+    for ind in range(len(list1)):
+        if ele == list1[ind]:
+            temp.append(ind)
+
+    print(ele, '---->', temp)
+
+
+
+# ans = [ (90,2), (44,6), (10,20), (32,26)]
+
+
+
+list2 = [(10,20), (90,2), (32,26), (44,6)]
+
+
+def fun3(subtup):
+    return subtup[-1]
+
+list2.sort(key=fun3)
+print(list2)
+
+
+l4 = [[10,32], [3,], [555,32], [22,900], [10,20]]
+
+n = 2
+
+ans = []
+temp = []
+
+for sublist in l4:
+    temp = []
+    for ele in sublist:
+        if len(str(ele)) == 2:
+            temp.append(True)
+
+        else:
+            temp.append(False)
+    
+    if all(temp):
+        print(sublist)
+# print(ans)
+
+
+
+print([i for i in list1 if all(len(str(j)) == k for j in i)])
