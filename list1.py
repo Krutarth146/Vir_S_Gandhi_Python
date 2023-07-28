@@ -161,3 +161,8 @@ for sublist in l4:
 
 
 print([i for i in list1 if all(len(str(j)) == k for j in i)])
+
+
+list2 = [10,90,-204,-200,-103,-221]
+
+ans = [10,90]
